@@ -1,0 +1,8 @@
+/* scratch framework */
+@import '../node_modules/@nikoloza/scratch-all/index.css';
+
+/* app specific settings */
+@import './css/index.css';
+
+/* components */
+@import './components/index.css';

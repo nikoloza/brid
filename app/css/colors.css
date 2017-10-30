@@ -1,0 +1,42 @@
+/* colors */
+:root {
+  --dark-sky-blue: #3bb7e9;
+  --dodger-blue: #498eff;
+
+  --greyish-brown: #424242;
+
+  --midgray: #A6A6A6;
+  --coldgray: #F0F1F4;
+  --lightgray: #f6f9fa;
+}
+
+/* brand colors */
+:root {
+  --primary: var(--dark-sky-blue);
+  --primary-contrast: white;
+
+  --primary-hover-blackness: -20%;
+  --primary-focus-blackness: +10%;
+
+  --primary-gradient: linear-gradient(118deg,
+    var(--dark-sky-blue),
+    var(--dodger-blue)
+  );
+  --primary-gradient-hover: linear-gradient(118deg,
+    currentColor -30%,
+    rgba(255, 255, 255, 0)
+  );
+  --primary-gradient-focus: linear-gradient(145deg,
+    currentColor -15%,
+    rgba(255, 255, 255, 0)
+  );
+
+  /* secondary */
+  --secondary: var(--greyish-brown);
+
+  /* tertiary */
+  --tertiary: var(--lightgray);
+
+  /* quaternary */
+  --quaternary: var(--midgray);
+}

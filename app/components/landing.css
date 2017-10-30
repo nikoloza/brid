@@ -1,0 +1,324 @@
+/* main section for landing page */
+.section.hero {
+  height: 100vh;
+  color: var(--primary-contrast);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    content: '';
+    z-index: -1;
+    background-image: url('~/assets/content/landing.jpg');
+    background-position: 60% 0px;
+    background-size: cover;
+  }
+
+  .content,
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .content {
+    flex: 1;
+    height: 100%;
+    padding-bottom: 13rem;
+    box-sizing: border-box;
+  }
+
+  .welcome {
+    height: 100%;
+    max-height: 34rem;
+    margin: var(--gutter-large) 0;
+  }
+
+  .title, .subtitle {
+    text-shadow: color(black alpha(20%)) 0 1px 4px;
+    max-width: 380px;
+    margin: 0;
+  }
+
+  .title {
+    font-weight: var(--font-bold);
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-size: var(--h7);
+  }
+
+  .latest {
+    border-radius: 50px;
+    color: var(--document-color);
+    background: var(--primary-contrast);
+    padding: .3rem .6rem .3rem .3rem;
+    line-height: 1;
+    letter-spacing: .4px;
+    box-shadow: rgba(0, 0, 0, .2) 0 1px 4px;
+
+    display: flex;
+    align-items: center;
+
+    .name {
+      padding: .3rem var(--gutter-tiny);
+      border-radius: 50px;
+      background: var(--primary-gradient);
+      color: var(--primary-contrast);
+      font-weight: var(--font-semibold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      transition: var(--transition-duration) letter-spacing;
+    }
+  }
+}
+
+body.is-parallax-active {
+  .section.hero {
+    &::after {
+      background-attachment: fixed;
+    }
+  }
+}
+
+@media (--bigger-than-phone-big) {
+  .section.hero {
+    .latest {
+      .text {
+        overflow: hidden;
+        margin-left: -.3rem;
+        width: 0;
+        white-space: nowrap;
+
+        animation: slideInLeft
+          var(--animation-duration-short) both
+          calc(var(--animation-duration-longer) * var(--animation-sequence));
+      }
+    }
+  }
+
+  @keyframes slideInLeft {
+    to {
+      margin-left: 0;
+      padding-left: .6rem;
+      width: 20em;
+    }
+  }
+}
+
+@media (--smaller-height-than-tablet) {
+  .section.hero {
+    .welcome {
+      max-height: 24rem;
+    }
+
+    .content {
+      padding-bottom: var(--gutter-large);
+    }
+
+    .latest {
+      /*  */
+    }
+  }
+}
+
+@media (--smaller-than-phone-big) {
+  .section.hero {
+    .content,
+    .welcome {
+      align-items: center;
+      text-align: center;
+    }
+
+    .welcome {
+      max-height: 36rem;
+    }
+
+    .content {
+      padding-bottom: 0;
+    }
+
+    .latest {
+      border-radius: 0;
+      padding: var(--gutter-small) var(--gutter);
+      align-items: center;
+
+      margin-left: -var(--gutter-big);
+      margin-right: -var(--gutter-big);
+
+      .text {
+        white-space: normal;
+        overflow-y: hidden;
+        line-height: 1.4;
+        text-align: left;
+        padding-left: var(--gutter);
+      }
+    }
+  }
+}
+
+/* section "Better client experience" */
+.section.ipad {
+  color: var(--primary-contrast);
+  background: var(--primary-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+
+  &:after {
+    content: url('/assets/content/ipad-screen.png');
+  }
+
+  .content {
+    padding-top: var(--gutter-large);
+    padding-bottom: var(--gutter-large);
+
+    p {
+      font-size: var(--h7);
+      margin-top: var(--gutter-big);
+      line-height: 1.6;
+    }
+  }
+}
+
+@media (--bigger-than-phone-big) {
+  .section.ipad {
+    height: 50rem;
+    overflow: hidden;
+
+    &:after {
+      position: absolute;
+      left: 55%;
+      top: 50%;
+      transform: translate3d(0, -50%, 1px);
+    }
+
+    .content {
+      h4, p {
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+@media (--bigger-than-screen-medium) {
+  .section.ipad {
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+@media (--smaller-than-phone-big) {
+  .section.ipad {
+    text-align: center;
+
+    &:after {
+      max-width: 100%;
+      transform: scale(.55);
+      margin: -calc(var(--gutter-large) * var(--gutter-big)) 0;
+    }
+  }
+}
+
+/* section "Why you’ll love your Digital Clipboard" */
+.section.why {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  background: var(--document-background);
+
+  .cintent {
+    max-width: 840px;
+  }
+
+  .row {
+    margin-top: 5rem;
+  }
+
+  .cell {
+    transition: var(--transition-duration) transform;
+
+    img {
+      width: 7.5rem; height: 7.5rem;
+      margin: var(--gutter-big);
+      transition: var(--transition-duration) transform;
+    }
+
+    p {
+      font-size: var(--h11);
+      line-height: 1.6;
+      margin: 0 auto 5rem;
+      max-width: 22rem;
+    }
+
+    &:hover {
+      transform: scale(1.06);
+      img { transform: scale(1.12); }
+    }
+  }
+}
+
+@media (--smaller-than-phone-big) {
+  .section.why {
+    .cell {
+      img {
+        margin: var(--gutter-small);
+      }
+
+      p {
+        max-width: none;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+/* section "Try Digital Clipboard for free" */
+.section.try {
+  background: var(--lightgray);
+  box-shadow: inset #F0F1F4 0 2px 1px;
+  padding: 10rem 0;
+
+  p {
+    margin: 0;
+    line-height: 1;
+
+    &:first-child {
+      margin-bottom: var(--gutter-big);
+    }
+  }
+
+  .buttons {
+    text-align: right;
+
+    .button {
+      margin: 0 var(--gutter-small) var(--gutter-big);
+    }
+  }
+}
+
+@media (--smaller-than-tablet-big) {
+  .section.try {
+    text-align: center;
+
+    .content {
+      flex-direction: column;
+      .cell { padding: 0; }
+    }
+
+    .buttons {
+      text-align: center;
+      margin: var(--gutter-large) 0 0;
+    }
+  }
+}

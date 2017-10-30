@@ -1,0 +1,14 @@
+.footer {
+  text-align: center;
+  padding: var(--gutter-large) var(--gutter);
+  font-size: var(--h11);
+
+  span {
+    opacity: .5;
+    transition: var(--transition-duration) opacity;
+  }
+
+  &:hover span {
+    opacity: 1;
+  }
+}

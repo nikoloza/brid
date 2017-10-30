@@ -1,0 +1,14 @@
+:root {
+  --document-color: var(--secondary);
+  --document-font-size: var(--h11);
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden;
+}

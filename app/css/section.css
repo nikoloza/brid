@@ -1,0 +1,12 @@
+.section {
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  max-width: 960px;
+  padding-left: var(--gutter-big);
+  padding-right: var(--gutter-big);
+  box-sizing: border-box;
+  margin: 0 auto;
+}

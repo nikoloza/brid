@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>4F48FC0B-63BB-447D-ABB8-FAC7F1E78472</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2FB9FF" offset="0%"></stop>
+            <stop stop-color="#498EFF" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="25.92" cy="25.92" r="25.92"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="website-1440" transform="translate(-523.000000, -1728.000000)">
+            <g id="benefits" transform="translate(0.000000, 1271.000000)">
+                <rect id="bg-white" fill="#FFFFFF" x="0" y="0" width="1440" height="644"></rect>
+                <g id="clients" transform="translate(450.000000, 445.000000)">
+                    <g id="ic-clients" transform="translate(61.000000, 0.000000)">
+                        <g id="client" transform="translate(12.000000, 12.000000)">
+                            <circle id="Oval" fill="url(#linearGradient-1)" cx="36" cy="36" r="36"></circle>
+                            <g id="Oval-Copy" transform="translate(10.080000, 10.080000)">
+                                <mask id="mask-3" fill="white">
+                                    <use xlink:href="#path-2"></use>
+                                </mask>
+                                <use id="Mask" fill="#FFFFFF" xlink:href="#path-2"></use>
+                                <circle id="Oval-2" fill="#1F60C0" mask="url(#mask-3)" cx="25.92" cy="18.24" r="10.56"></circle>
+                                <ellipse fill="#1F60C0" mask="url(#mask-3)" cx="25.92" cy="59.04" rx="22.56" ry="25.92"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
