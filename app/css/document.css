@@ -1,6 +1,6 @@
 :root {
-  --document-color: var(--secondary);
-  --document-font-size: var(--h11);
+  --document-color: var(--primary);
+  --document-font-size: var(--h6);
 }
 
 html,

@@ -1,38 +1,22 @@
 /* colors */
 :root {
-  --dark-sky-blue: #3bb7e9;
-  --dodger-blue: #498eff;
+  --black: #0D0D0D;
 
-  --greyish-brown: #424242;
-
-  --midgray: #A6A6A6;
-  --coldgray: #F0F1F4;
-  --lightgray: #f6f9fa;
+  --green: #6DEA4C;
+  --green-darker: #67DE46;
 }
 
 /* brand colors */
 :root {
-  --primary: var(--dark-sky-blue);
-  --primary-contrast: white;
-
-  --primary-hover-blackness: -20%;
-  --primary-focus-blackness: +10%;
-
-  --primary-gradient: linear-gradient(118deg,
-    var(--dark-sky-blue),
-    var(--dodger-blue)
-  );
-  --primary-gradient-hover: linear-gradient(118deg,
-    currentColor -30%,
-    rgba(255, 255, 255, 0)
-  );
-  --primary-gradient-focus: linear-gradient(145deg,
-    currentColor -15%,
-    rgba(255, 255, 255, 0)
-  );
+  /* primary */
+  --primary: var(--black);
 
   /* secondary */
-  --secondary: var(--greyish-brown);
+  --secondary: var(--green);
+  --secondary-contrast: white;
+  --secondary-helper: black;
+
+  --secondary-darker: var(--green-darker);
 
   /* tertiary */
   --tertiary: var(--lightgray);

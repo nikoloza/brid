@@ -1,83 +1,42 @@
-'use strict'
+import React from 'react'
+import { render } from 'react-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
+
 require('./style.css')
 
-import axios from 'axios'
-import Modal from './modal'
-import Parallax from './parallax'
+import Layout from './layout'
+import Home from './home'
 
-window.m = new Modal()
-window.p = new Parallax([{
-  selector: '.section.hero::after',
-  property: 'background-position',
-  direction: { y: -1 },
-  initial: '60% 0px',
-  force: { y: 0.5 },
-  wrap: [ '@media only screen and (min-width: 728px) {', '}' ]
-}, {
-  selector: '.section.ipad::after',
-  property: 'transform',
-  initial: '0% -100%',
-  direction: { y: 1 },
-  force: { y: .075 },
-  wrap: [ '@media only screen and (min-width: 728px) {', '}' ]
-}, {
-  selector: [
-    '.section.hero .header',
-    '.section.hero .welcome > *',
-    '.section.hero .latest',
-    '.section.why .cell'
-  ],
-  when: 'visible',
-  animation: {
-    basic: 'animation',
-    in: 'fade-in-up',
-    out: 'hidden'
-  },
-  once: true,
-  init (element, key) {
-    if (key > 4) key = (key - 5) * 75
-    else key *= 200
-    element.style.animationDuration = '1000ms'
-    element.style.animationDelay = key + 'ms'
-  },
-  before (element, key) {},
-  after (element, key) {}
-}, {
-  selector: [
-    '.section.try p',
-    '.section.try .button',
-    '.footer span'
-  ],
-  when: 'visible',
-  once: true,
-  animation: {
-    basic: 'animation longer',
-    in: 'fade-in-up',
-    out: 'hidden'
-  },
-  init (element, key) {
-    element.style.animationDelay = key * 85 + 'ms'
+class Projects extends React.Component {
+  render () {
+    return <div>
+      projects
+    </div>
   }
-}])
+}
 
-var emailForms = document.querySelectorAll('[data-email]')
-emailForms.forEach((v) => {
-  v.addEventListener('submit', (e) => {
-    e.preventDefault()
+class PageNotFound extends React.Component {
+  render () {
+    return <div>
+      not found
+    </div>
+  }
+}
 
-    var { type, email } = v.dataset
-    var data = {
-      firstname: v.firstname.value,
-      lastname: v.lastname.value,
-      email: v.email.value,
-      message: v.message ? v.message.value : '{ Signup Request }'
-    }
-
-    axios({
-      method: 'post',
-      url: 'https://formspree.io/' + email,
-      data
-    }).then((response) => window.m.set('thanks'))
-    .catch((error) => window.m.set('error'))
-  })
-})
+render(
+  <Router>
+    <Layout>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/projects" component={Projects}/>
+        <Route component={PageNotFound}/>
+      </Switch>
+    </Layout>
+  </Router>,
+  document.getElementById('root')
+)
