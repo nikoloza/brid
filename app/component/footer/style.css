@@ -1,0 +1,27 @@
+:root {
+  --footer-vertical-padding: calc(var(--header-vertical-padding) * 2);
+  --footer-horizontal-padding: var(--header-horizontal-padding);
+}
+
+footer.footer {
+  background: white;
+  padding:  var(--footer-vertical-padding) var(--footer-horizontal-padding);
+  
+  display: flex;
+  justify-content: space-between;
+
+  .copyright {
+    span {
+      display: block;
+      margin-top: 6em;
+    }
+  }
+
+  &.project {
+    .get-in-touch {
+      h6 {
+        margin-top: 0;
+      }
+    }
+  }
+}

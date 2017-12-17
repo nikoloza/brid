@@ -1,5 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,14 +12,7 @@ require('./style.css')
 
 import Layout from './layout'
 import Home from './home'
-
-class Projects extends React.Component {
-  render () {
-    return <div>
-      projects
-    </div>
-  }
-}
+import Project from './project'
 
 class PageNotFound extends React.Component {
   render () {
@@ -30,13 +24,21 @@ class PageNotFound extends React.Component {
 
 render(
   <Router>
-    <Layout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/projects" component={Projects}/>
-        <Route component={PageNotFound}/>
-      </Switch>
-    </Layout>
+    <Route render={({ location }) => (
+      <Layout location={location}>
+        <ReactCSSTransitionGroup
+          transitionName="fade-up"
+          transitionEnterTimeout={750}
+          transitionLeaveTimeout={750}
+        >
+          <Switch key={location.key} location={location}>
+            <Route exact path="/" component={Home} />
+            <Route path="/project/:id" component={Project}/>
+            <Route component={PageNotFound}/>
+          </Switch>
+        </ReactCSSTransitionGroup>
+      </Layout>
+    )} />
   </Router>,
   document.getElementById('root')
 )

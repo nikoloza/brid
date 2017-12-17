@@ -11,7 +11,7 @@ module.exports = {
   template: './index.html',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.[hash].js'
+    filename: '/bundle.[hash].js'
   },
   resolve: {
     modulesDirectories: ['node_modules', 'shared'],
@@ -59,7 +59,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('bundle.[hash].css'),
+    new ExtractTextPlugin('/bundle.[hash].css'),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({

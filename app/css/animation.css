@@ -1,13 +1,1 @@
-.animation {
-  animation-fill-mode: both;
-}
-
-.section.hero .header,
-.section.hero .welcome > *,
-.section.hero .latest,
-.section.why .cell,
-.section.try p,
-.section.try .button,
-.footer span {
-  opacity: 0;
-}
+.animation {}

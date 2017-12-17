@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
+
 import Header from '../component/header'
 import Circle from '../component/circle'
 import Filter from '../component/filter'
 import Grid from '../component/grid'
+import Footer from '../component/footer'
 
 import { Categories, Projects } from './data'
 
 class Home extends Component {
   render () {
-    return [
-      <main className="home" key="main">
+    return <div>
+      <main className="home">
         <Circle />
 
         <section className="message">
@@ -19,12 +21,12 @@ class Home extends Component {
         </section>
 
         <Filter categories={ Categories } />
-      </main>,
+      </main>
 
-      <Grid key="grid" categories={ Categories } projects={ Projects } />,
+      <Grid categories={ Categories } projects={ Projects } />
 
-      <footer key="footer" />
-    ]
+      <Footer />
+    </div>
   }
 }
 

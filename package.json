@@ -16,6 +16,7 @@
     "@scratch-css/reset": "^1.0.2",
     "@scratch-css/scratch": "^1.0.1",
     "react": "^16.1.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.1.1",
     "react-inlinesvg": "^0.7.1",
     "react-router": "^4.2.0",

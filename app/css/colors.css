@@ -10,6 +10,7 @@
 :root {
   /* primary */
   --primary: var(--black);
+  --primary-contrast: white;
 
   /* secondary */
   --secondary: var(--green);
@@ -23,4 +24,7 @@
 
   /* quaternary */
   --quaternary: var(--midgray);
+
+  /* quinary */
+  --quinary: var(--midgray);
 }

@@ -10,11 +10,46 @@
 @import './component/header/style.css';
 @import './component/filter/style.css';
 @import './component/grid/style.css';
+@import './component/navigation/style.css';
+@import './component/footer/style.css';
+@import './component/get-in-touch/style.css';
 
 /* pages */
 @import './layout/style.css';
 @import './home/style.css';
+@import './project/style.css';
 
 body {
   background: black;
+}
+
+.fade-up-enter,
+.fade-up-leave {
+  position: absolute;
+  width: 100%; height: 100%;
+  left: 0; top: 0;
+  transition: var(--transition-duration) ease;
+  transition-property: opacity, transform;
+}
+
+.fade-up-enter {
+  transform: translate3d(0, 10rem, 0);
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-up-enter.fade-up-enter-active {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.fade-up-leave {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  z-index: 0;
+}
+
+.fade-up-leave.fade-up-leave-active {
+  transform: translate3d(0, -10rem, 0);
+  opacity: 0;
 }
