@@ -4,6 +4,8 @@
 
   --green: #6DEA4C;
   --green-darker: #67DE46;
+
+  --blue: #0022F4;
 }
 
 /* brand colors */
@@ -20,7 +22,9 @@
   --secondary-darker: var(--green-darker);
 
   /* tertiary */
-  --tertiary: var(--lightgray);
+  --tertiary: var(--blue);
+  --tertiary-contrast: white;
+  --tertiary-helper: var(--primary);
 
   /* quaternary */
   --quaternary: var(--midgray);

@@ -20,7 +20,7 @@ class Project extends Component {
     var project = Projects[state.projectKey]
 
     return <div>
-      <main key="main" className="project">
+      <main className="project">
         <Circle type="dark" />
 
         <section className="message">
@@ -35,7 +35,7 @@ class Project extends Component {
         </section>
       </main>
 
-      <section key="images" className="images">
+      <section className="images">
         {project.images
           ? project.images.map((img, key) => 
             <figure key={key} style={{

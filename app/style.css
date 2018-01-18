@@ -18,6 +18,7 @@
 @import './layout/style.css';
 @import './home/style.css';
 @import './project/style.css';
+@import './studio/style.css';
 
 body {
   background: black;

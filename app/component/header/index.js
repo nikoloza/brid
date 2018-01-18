@@ -35,7 +35,7 @@ class Header extends React.Component {
         <button
           className={[
             state.active ? 'active' : '', 
-            state.theme ? state.theme : 'dark'
+            state.theme ? state.theme : 'light'
           ].join(' ')} 
           onClick={toggle.bind(this)}>
             <span>WORK</span>

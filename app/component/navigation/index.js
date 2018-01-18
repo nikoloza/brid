@@ -14,7 +14,7 @@ class navigation extends React.Component {
             <NavLink activeClassName="active" exact to={{
               pathname: '/',
               state: {
-                theme: 'dark',
+                theme: 'light',
               },
               isActive: function (match, location) {
                 console.log(match, location)
@@ -22,18 +22,11 @@ class navigation extends React.Component {
             }}>Work</NavLink>
 
             <NavLink activeClassName="active" to={{
-              pathname: '/services',
+              pathname: '/studio',
               state: {
-                theme: 'dark',
+                theme: 'light',
               }
-            }}>Services</NavLink>
-
-            <NavLink activeClassName="active" to={{
-              pathname: '/about',
-              state: {
-                theme: 'dark',
-              }
-            }}>About</NavLink>
+            }}>Studio</NavLink>
 
             <NavLink activeClassName="active" to={{
               pathname: '/contact',

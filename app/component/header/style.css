@@ -59,8 +59,19 @@
     span {
       color: var(--primary);
       opacity: 1;
-      transition: var(--transition-duration-long);
       transition-property: opacity;
+      margin-right: var(--gutter);
+      transition: var(--transition-duration-long) color ease;
+    }
+
+    &:hover {
+      span {
+        color: var(--secondary);
+      }
+
+      &.light span {
+        color: var(--primary);
+      }
     }
 
     &.active {
