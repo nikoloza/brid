@@ -14,6 +14,7 @@ import Layout from './layout'
 import Home from './home'
 import Project from './project'
 import Studio from './studio'
+import Contact from './contact'
 
 class PageNotFound extends React.Component {
   render () {
@@ -36,6 +37,7 @@ render(
             <Route exact path="/" component={Home} />
             <Route path="/project/:id" component={Project}/>
             <Route path="/studio" component={Studio}/>
+            <Route path="/contact" component={Contact}/>
             <Route component={PageNotFound}/>
           </Switch>
         </ReactCSSTransitionGroup>

@@ -31,7 +31,7 @@ class navigation extends React.Component {
             <NavLink activeClassName="active" to={{
               pathname: '/contact',
               state: {
-                theme: 'dark',
+                theme: 'light',
               }
             }}>Contact</NavLink>
 

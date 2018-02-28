@@ -19,6 +19,7 @@
 @import './home/style.css';
 @import './project/style.css';
 @import './studio/style.css';
+@import './contact/style.css';
 
 body {
   background: black;
